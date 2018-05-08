@@ -68,7 +68,8 @@ a {
 
 .burgundy {
   color: white;
-  background-color: #3b2b33;} 
+  background-color: #660033;
+  padding: 40px;} 
 
 .btn {
   font-weight: 400;
@@ -108,7 +109,7 @@ a {
   height: auto;}
 
 .white-box {
-  
+  background-color: #ffffff;
   color: #003366;
   text-align: center;
   padding: 20px;

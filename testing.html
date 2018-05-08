@@ -96,7 +96,9 @@
             <p style="font-size:.90em;font-style: italic;">Please let us know if you will be able to attend by August 18, 2018.</p>
           </div>
           <div class="row justify-content-center" style="padding-top:20px;">
-            <form name="submit-to-google-sheet" class="needs-validation" novalidate>
+            <form name="rsvp" class="needs-validation" novalidate
+            id="gform" method="POST" data-email="contact@alexandcass.com"
+            action="https://script.google.com/macros/s/AKfycbzkXV0WuVYFvvx1aGDO5lbX2BLkzCXVvQcLQPgJEkgH29fMJ6qC/exec">
               <div class="form-group">
                 <label for="rsvp"><h6>Will you be able to make it?</h6></label>
                 <select class="form-control custom-select form-control-sm" id="rsvp" name="rsvp" required>
@@ -229,10 +231,8 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Polyfill Scripts -->
-    <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+    <script data-cfasync="false" type="text/javascript"
+    src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/drinkingShirts.js"></script>

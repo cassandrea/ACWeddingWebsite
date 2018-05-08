@@ -99,10 +99,12 @@ function validEmail(email) { // see:
       xhr.send(encoded);
     }
   }
+
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
     var form = document.getElementById("gform");
     form.addEventListener("submit", handleFormSubmit, false);
   };
+  
   document.addEventListener("DOMContentLoaded", loaded, false);

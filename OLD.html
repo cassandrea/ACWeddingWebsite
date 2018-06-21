@@ -61,6 +61,7 @@
     <!-- Info -->
     <section id="info" class="content-section" style="padding-bottom:0px;">
       <div class="container text-center">
+        <!--
         <div class="row justify-content-center">
           <h3>Iron Your Drinking Shirts</h3>
         </div>
@@ -73,16 +74,16 @@
         <div class="row justify-content-center">
           <h6>Saturday, September 8, 2018 | Great Divide Brewing Co. | Denver, CO</h6></br></br>
         </div>
-        <!--
+         -->
         <div>
           </br><h2>We'll be sending formal invitations by mail this summer and updating details here as we get closer.</h2>
           <p>If you need to update the contact info you provided us earlier, you may do so <a href="https://goo.gl/forms/D24JQsQkQoYWPpBl2" target="_blank">here</a>.</p>
         </div>
-        -->
+       
       </div>
     </section>
 
-    <!-- RSVP -->
+    <!-- RSVP 
     <section id="rsvp">
       <div class="row justify-content-center">
         <h2><a class="btn" data-toggle="collapse" href="#rsvp-form" aria-expanded="false" aria-controls="rsvp-form">RSVP Here</a></h2>
@@ -96,9 +97,7 @@
             <p style="font-size:.90em;font-style: italic;">Please let us know if you will be able to attend by August 18, 2018.</p>
           </div>
           <div class="row justify-content-center" style="padding-top:20px;">
-            <!-- Beginning of RSVP Form -->
-            <form id="gform" class="needs-validation" novalidate
-             method="POST" action="https://script.google.com/macros/s/AKfycbxGV1K2TDcVEUEJNVndOa2SpMBV4jb7F4HOv8dPaQ_jP6bher0/exec">
+            <form name="submit-to-google-sheet" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="rsvp"><h6>Will you be able to make it?</h6></label>
                 <select class="form-control custom-select form-control-sm" id="rsvp" name="rsvp" required>
@@ -123,7 +122,7 @@
               </div>
               <div class="form-group">
                 <label for="email"><h6>Email Address</h6></label>
-                <input type="email" class="form-control form-control-sm" id="email" name="email" required>
+                <input type="text" class="form-control form-control-sm" id="email" name="email" required>
                 <div class="invalid-feedback">
                   Please enter an email address.
                 </div>
@@ -132,19 +131,13 @@
                 <label for="comments"><h6>Comments</h6></label>
                 <textarea class="form-control form-control-sm" id="comments" name="comments" rows="2"></textarea>
                 <small id="help-text" class="form-text text-muted">Let us know if you have any dietary restrictions, need special accommodations, or have any other comments.</small>
-                <!-- This is for spam prevention -->
-                <label class="sr-only">Keep this field blank</label>
-                <input id="honeypot" type="text" name="honeypot" value="" />
               </div>
               <button type="submit" class="btn">Submit</button>
-            </form>
-            <div style="display:none;" id="thankyou_message">
-              <h2><em>Success!!</em>!</h2>
-            </div>  
+            </form>  
           </div>
         </div>
       </div>
-    </section>
+    </section>  -->
 
     <!-- Accomodations -->
     <section id="accomodations" class="content-section text-center">
@@ -173,7 +166,7 @@
               <dt><h5><b>When will I get an invitation and when should I RSVP?</b></h5></dt>
                 <dd>Early July</dd></br>
               <dt><h5><b>What time will everything start? <!--should I arrive? --> </b></h5></dt>
-                <dd>Likely around 7pm<!--Sometime between 7-7:30pm --> </dd></br>
+                <dd>We're still figuring this out, but likely around 7:30pm<!--Sometime between 7-7:30pm --> </dd></br>
               <dt><h5><b>Can I bring my kid(s) along?</b></h5></dt>  
                 <dd>It depends. We're having a late night party at a brewery. 
                   It'll involve lots of drinking, mingling, and dancing - as well as some quiet time around 8-9pm for the ceremony and toasts. 
@@ -239,7 +232,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/drinkingShirts.js"></script>
-    <script src="js/form-submission-handler.js"></script>
 
   </body>
 

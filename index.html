@@ -41,29 +41,20 @@
           </ul>
         </div>
       </div>
-    </nav>
-
-    <!-- Blue Divider -->
-    <section id="divider" class="blue-container">
-      <div class="container">
-        <div class="row justify-content-center" style="padding-top:20px;">
-        </div>
-      </div>
-    </section>  
+    </nav> 
 
     <!-- Header -->
     <section id="header" class="landing">
       <div class="container">  
-          <img src="img/SaveTheDate.jpg" class="img-fluid picture">
+        <img src="img/SaveTheDate.jpg" class="img-fluid picture landing-img">
       </div>
     </section>
 
     <!-- Info -->
     <section id="info" class="content-section" style="padding-bottom:0px;">
       <div class="container text-center">
-        <!--
         <div class="row justify-content-center">
-          <h3>Iron Your Drinking Shirts</h3>
+          <h3 class="gold-text">Iron Your Drinking Shirts</h3>
         </div>
         <div class="row justify-content-center">
           <h2>We're getting married!</h2></br>
@@ -74,75 +65,90 @@
         <div class="row justify-content-center">
           <h6>Saturday, September 8, 2018 | Great Divide Brewing Co. | Denver, CO</h6></br></br>
         </div>
-         -->
-        <div>
-          </br><h2>We'll be sending formal invitations by mail this summer and updating details here as we get closer.</h2>
-          <p>If you need to update the contact info you provided us earlier, you may do so <a href="https://goo.gl/forms/D24JQsQkQoYWPpBl2" target="_blank">here</a>.</p>
-        </div>
-       
       </div>
     </section>
 
-    <!-- RSVP 
+    <!-- RSVP -->
     <section id="rsvp">
       <div class="row justify-content-center">
         <h2><a class="btn" data-toggle="collapse" href="#rsvp-form" aria-expanded="false" aria-controls="rsvp-form">RSVP Here</a></h2>
       </div>
-      <div id="rsvp-form" class="text-center collapse burgundy">
+      <div id="rsvp-form" class="text-center collapse purple">
         <div class="container text-center white-box">
-          <div class="row justify-content-center">
-            <h2>We can't wait to see you at our wedding!</h2>
+          <!-- Container for RSVP form before submit - this will get hidden after submit -->
+          <div id="rsvp-section" class="container text-center">
+            <div class="row justify-content-center">
+              <h2>We can't wait to see you at our wedding!</h2>
+            </div>
+            <div class="row justify-content-center">
+              <p style="font-size:.90em;font-style: italic;">Please let us know if you will be able to attend by August 18, 2018.</p>
+            </div>
+            <div class="row justify-content-center" style="padding-top:20px;">
+              <!-- Beginning of RSVP Form -->
+              <form id="gform" novalidate
+              method="POST" action="https://script.google.com/macros/s/AKfycbxGV1K2TDcVEUEJNVndOa2SpMBV4jb7F4HOv8dPaQ_jP6bher0/exec">
+                <div class="form-group">
+                  <label for="rsvp"><h6>Will you be able to make it?</h6></label>
+                  <select class="form-control custom-select form-control-sm" id="rsvp" name="rsvp" required>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please make a selection.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="names"><h6>First and Last Name(s)</h6></label>
+                  <input type="text" class="form-control form-control-sm" id="names" name="names" required>
+                  <small id="help-text" class="form-text text-muted">Please include the names of everyone you're responding for.</small>
+                  <div class="invalid-feedback">
+                    Please enter your name(s).
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="number"><h6>Number Attending</h6></label>
+                  <input type="text" class="form-control form-control-sm" id="number" name="number">
+                </div>
+                <div class="form-group">
+                  <label for="email"><h6>Email Address</h6></label>
+                  <input type="email" class="form-control form-control-sm" id="email" name="email" required>
+                  <div class="invalid-feedback">
+                    Please enter an email address.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="comments"><h6>Comments</h6></label>
+                  <textarea class="form-control form-control-sm" id="comments" name="comments" rows="2"></textarea>
+                  <small id="help-text" class="form-text text-muted">Let us know if you have any dietary restrictions, need special accommodations, or have any other comments.</small>
+                  <!-- This is for spam prevention -->
+                  <label class="sr-only">Keep this field blank</label>
+                  <input id="honeypot" type="text" name="honeypot" value="" />
+                </div>
+                <button type="submit" class="btn">Submit</button>
+              </form>
+            </div>
           </div>
-          <div class="row justify-content-center">
-            <p style="font-size:.90em;font-style: italic;">Please let us know if you will be able to attend by August 18, 2018.</p>
-          </div>
-          <div class="row justify-content-center" style="padding-top:20px;">
-            <form name="submit-to-google-sheet" class="needs-validation" novalidate>
-              <div class="form-group">
-                <label for="rsvp"><h6>Will you be able to make it?</h6></label>
-                <select class="form-control custom-select form-control-sm" id="rsvp" name="rsvp" required>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please make a selection.
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="names"><h6>First and Last Name(s)</h6></label>
-                <input type="text" class="form-control form-control-sm" id="names" name="names" required>
-                <small id="help-text" class="form-text text-muted">Please include the names of everyone you're responding for.</small>
-                <div class="invalid-feedback">
-                  Please enter your name(s).
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="number"><h6>Number Attending</h6></label>
-                <input type="text" class="form-control form-control-sm" id="number" name="number">
-              </div>
-              <div class="form-group">
-                <label for="email"><h6>Email Address</h6></label>
-                <input type="text" class="form-control form-control-sm" id="email" name="email" required>
-                <div class="invalid-feedback">
-                  Please enter an email address.
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="comments"><h6>Comments</h6></label>
-                <textarea class="form-control form-control-sm" id="comments" name="comments" rows="2"></textarea>
-                <small id="help-text" class="form-text text-muted">Let us know if you have any dietary restrictions, need special accommodations, or have any other comments.</small>
-              </div>
-              <button type="submit" class="btn">Submit</button>
-            </form>  
+          <!-- Succesful Form Submission -->
+          <div style="display:none;" id="thankyou_message">
+              <h2>Thank you for your RSVP!</h2></br>
+              <img src="img/giphy.gif" class="img-fluid picture" style="max-width:50%;">
           </div>
         </div>
       </div>
-    </section>  -->
+    </section>
+
+    <!-- Divider -->
+    <section id="divider">
+        <div class="container" style="margin-top: 3%;">
+          <div class="row justify-content-center divider"></div>
+          <div class="row justify-content-center divider"></div>
+        </div>
+      </section>
 
     <!-- Accomodations -->
     <section id="accomodations" class="content-section text-center">
         <div class="container text-center">
-            <h3>Accomodations</h3>
+            <h3 class="gold-text">Accomodations</h3>
             <p>We'll be staying at The Source Hotel, a locally-owned hotel in Denver’s RiNo District.<br><br>
             <a href="http://www.thesourcehotel.com" target="_blank"><img src="img/sourceHotel.jpg" class="picture" style="width:50%;height:50%;"></a><br><br>
             An extension of the nationally acclaimed Source market hall, the hotel features a small-batch New Belgium brewery, 
@@ -158,49 +164,49 @@
         </div>
     </section>
 
+    <!-- Divider -->
+    <section id="divider">
+        <div class="container" style="margin-top: 3%;">
+          <div class="row justify-content-center divider"></div>
+          <div class="row justify-content-center divider"></div>
+        </div>
+      </section>
+
     <!-- FAQ -->
     <section id="faq" class="content-section">
         <div class="container text-center">
-          <h3>FAQ</h3>
+          <h3 class="gold-text">FAQ</h3>
             <dl>
               <dt><h5><b>When will I get an invitation and when should I RSVP?</b></h5></dt>
-                <dd>Early July</dd></br>
-              <dt><h5><b>What time will everything start? <!--should I arrive? --> </b></h5></dt>
-                <dd>We're still figuring this out, but likely around 7:30pm<!--Sometime between 7-7:30pm --> </dd></br>
+                <dd>Late June/Early July</dd></br>
+              <dt><h5><b>What time should I arrive?</b></h5></dt>
+                <dd>Around 7pm</dd></br>
               <dt><h5><b>Can I bring my kid(s) along?</b></h5></dt>  
-                <dd>It depends. We're having a late night party at a brewery. 
-                  It'll involve lots of drinking, mingling, and dancing - as well as some quiet time around 8-9pm for the ceremony and toasts. 
-                  If this is cool with your kiddos, bring them along! If not, we'd highly recommend a sitter.</dd></br>
+                <dd>We're having a late night party at a brewery and cannot accommodate guests under age 21.</dd></br>
               <dt><h5><b>Should I get you a gift?</b></h5></dt>
                 <dd>It's entirely optional, but if you're feeling generous, <a href="https://www.amazon.com/wedding/share/Alex-Cass" target="_blank">check out our Amazon registry.</a></dd><br>
-              <!--
               <dt><h5><b>What should I expect?</b></h5></dt>
-                <dd>We kinda threw tradition out the window in favor of a celebration we're actually excited about.</dd>
-                <dd><b>Our timeline will look something like this:</b><br>
-                        7pm - <del>Cocktail</del> Beer Hour<br>
-                        8pm - Exchange of Vows<br>
-                        8:30pm - Toasts<br>
-                        9pm - First Dance<br>
-                        10:30pm - Last Call<br>
-                        11pm - Afterparty<br></dd>
-                <dd>There'll be plenty of beer, wine, and food pairings throughout the evening.<br> 
+                <dd>We kinda threw tradition out the window in favor of a celebration we're super excited about. 
+                  A fun, casual wedding with the feel of a beer fest meets mountain picnic.
+                  The doors open at 7pm and the ceremony will start at 7:30pm. Arrive closer to 7pm to grab a drink and mingle beforehand.</dd>                       
+                <dd>There will be plenty of beer, wine, and food pairings throughout the evening.
                     If you're looking for a heavier meal beforehand, we reccommend checking out one of the many <a href="https://denver.eater.com/maps/best-restaurants-rino-denver" target="_blank">amazing restaurants in the neighborhood.</a>
                 </dd></br>
               <dt><h5><b>How do I get there?</b></h5></dt>
                 <dd><h6>Great Divide Brewing Co. Event Space<br>
-                        3403 Brighton Blvd, Denver, CO 80216</h6></dd>
+                        3403 Brighton Blvd, Denver, CO 80216</h6></dd></br>
+                <dd><iframe class="map" src="https://snazzymaps.com/embed/33081" width="75%" height="300px" ></iframe></dd></br>
+                <dd><b>The Source Hotel</b><br>
+                  The hotel is directly across the street from the brewery.</dd>
+                <dd><b>Lyft</b><br>
+                  Skip the hassle of driving through Denver and use Lyft.<br> 
+                  Download the app and get a ride in minutes with one of these <a href="https://www.lyft.com/promo-coupon-code-free-rides" target="_blank">promo codes.</a></dd>
                 <dd><b>Drive</b><br>
                     Take exit 214A from I-25N or exit 274 from I-70E. <br>
                     Turn right on Washington St. and continue to E Brighton Blvd. <br>
                     Turn right onto E Brighton Blvd and the brewery will be on your right.<br>
                     There's a parking lot on the south side of the brewery, just off Brighton Blvd.</dd>
-                <dd><b>Lyft</b><br>
-                    Skip the hassle of driving through Denver and use Lyft.<br> 
-                    Download the app and get a ride in minutes with one of these <a href="https://www.lyft.com/promo-coupon-code-free-rides" target="_blank">promo codes.</a></dd>
-                <dd><b>The Source Hotel</b><br>
-                    The hotel is directly across the street from the brewery. The road can be pretty busy at times though, so go up one block to 35th to get across safely.</dd>
-                <dd>
-                  <iframe class="map" src="https://snazzymaps.com/embed/33081" width="75%" height="300px" ></iframe></dd></br>
+                <dd><img class="picture" src="img/greatDivideMap.jpg" style="max-width:30%;"></dd></br>
               <dt><h5><b>What should I wear?</b></h5></dt>
                 <dd>How about "Comfy Formal" - Nice enough for a wedding and comfy enough for a brewery.<br>
                 Also... you might regret wearing those stilettos.</dd></br>
@@ -208,17 +214,16 @@
                 <dd>Definitely! Add your requests to our <a href="https://open.spotify.com/user/r6ttazw57z5gw13295f7dtruc/playlist/1ssOBSMMtbIGjIiYw670vT" target="_blank">Spotify Playlist</a>.</dd></br>
               <dt><h5><b>Can I take pictures?</b></h5></dt>
                 <dd>Yes, please do! And <a href="https://photos.app.goo.gl/6OuFXBkIaBYPiprf2" target="_blank">upload them to our album</a> while you're at it.</dd></br>
-                -->
                 <dt><h5><b>I have a question not answered here; how do I contact you?</b></h5></dt>
                 <dd><a href="mailto:contact@alexandcass.com" target="_blank">Send us an email!</a></dd><br> 
             </dl>
         </div>
     </section>
   
-    <!-- Bottom Blue Line -->
-    <section id="divider" class="blue-container">
+    <!-- footer -->
+    <section id="divider" class="purple">
       <div class="container">
-        <div class="row justify-content-center" style="padding-top:20px;">
+        <div class="row justify-content-center">
         </div>
       </div>
     </section>   
@@ -232,6 +237,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/drinkingShirts.js"></script>
+    <script src="js/form-submission-handler.js"></script>
 
   </body>
 

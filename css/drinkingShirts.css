@@ -1,10 +1,10 @@
 html {
   width: 100%;
   height: 100%; 
-  background: #fefefe;}
+  background: #fdfafc;}
 
 body {
-  background: #fefefe;
+  background: #fdfafc;
   font-family: 'Lato', serif;
   color: #001f3f;
   position: relative;
@@ -16,7 +16,7 @@ h1 {
   font-family: 'Playfair Display', sans-serif;
   font-style: bold;
   font-weight: 300;
-  color: #660033;
+  color: #4B2436;
   text-shadow: 1px 1px rgba(0, 0, 0, .16);
   letter-spacing: 1px;
   font-size: 4em;
@@ -29,13 +29,13 @@ h2 {
 h3 {
   font-family: 'Covered By Your Grace', cursive;
   font-weight: 300;
-  color: #660033; 
+  color: #4B2436; 
   font-size: 3.7em;
   transform: rotate(-3deg);
   padding-bottom: 15px;}
 h4 {
   font-family: 'Lato', serif;
-  color: #660033;
+  color: #4B2436;
   font-size: 2.4em; }
 h5 {
   font-family: 'Lato', serif;
@@ -43,7 +43,7 @@ h5 {
   font-size: 1.5em;}
 h6 {
   font-family: 'Playfair Display', sans-serif;
-  color: #660033;
+  color: #4B2436;
   font-weight: bold;
 }
 
@@ -51,25 +51,11 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #660033; 
+  color: #4B2436; 
   text-decoration: underline;}
   a:focus, a:hover {
     text-decoration: underline;
-    color: #660033; }  
-
-.blue{
-  color: white;
-  background-color: #001f3f;}
-
-.blue-container {
-  background: #001f3f;
-  position: relative;
-  z-index: 1;}
-
-.burgundy {
-  color: white;
-  background-color: #660033;
-  padding: 40px;} 
+    color: #4B2436; }  
 
 .btn {
   font-weight: 400;
@@ -84,15 +70,36 @@ a {
   text-decoration: none; }
   .btn:focus, .btn:hover {
     color: white;
-    border: 1px solid #660033;
+    border: 1px solid #4B2436;
     outline: none;
-    background-color: #660033; }
+    background-color: #4B2436; }
 
 .content-section {
-  padding: 90px 20px 20px 20px;}
+  padding: 70px 20px 20px 20px;}
+
+.divider {
+  background-color: #4B2436;
+  margin-top:1px; 
+  padding-top:1px;}
+
+.gold-text {
+  color:#D4AF37;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+              url("../img/goldFoil.jpg") repeat;
+  -webkit-background-clip: text;
+  text-shadow: 1px 1px rgba(0, 0, 0, .40);}
 
 .landing{
-  padding-top: 0px;} 
+  padding: 0px 0px 0px 0px;
+  margin-top: 2%; 
+  margin-bottom: 2%;
+  background:#4B2436; } 
+
+.landing-img {
+  margin-top:-3%;
+  margin-bottom:-3%;
+  padding: -10px; }
 
 .map{
   padding: 0px;
@@ -101,12 +108,17 @@ a {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
 
 .picture{
-  border:none;
-  border-radius: 5px;
+  border: 0px solid #D4AF37;
+  border-radius: 5px 5px 5px 5px;
   box-shadow: 0 2px 5px 0 rgba(0, 51, 102, 0.16), 0 2px 10px 0 rgba(0, 51, 102, 0.12);
   padding-top: 0px; 
   max-width: 100%;
   height: auto;}
+
+.purple {
+  color: white;
+  background-color: #4B2436;
+  padding: 20px;} 
 
 .white-box {
   background-color: #ffffff;
@@ -116,7 +128,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
-  border-color: #660033;
+  border-color: #4B2436;
   border: 1px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }  
 
@@ -125,7 +137,7 @@ a {
   margin-bottom: 0;
   text-transform: uppercase;
   border-bottom: 0px solid rgba(0, 0, 0, 0.3);
-  background-color: #fefefe; }
+  background-color: #fdfafc; }
   #mainNav .navbar-toggler {
     font-size: 14px;
     padding: 11px;
@@ -147,7 +159,7 @@ a {
     #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
       outline: none;
       color: white;
-      background-color: #660033; }
+      background-color: #4B2436; }
   @media (min-width: 992px) {
     #mainNav {
       padding-top: 20px;
@@ -165,11 +177,11 @@ a {
         padding-top: 10px;
         padding-bottom: 10px;
         border-bottom: 0px solid rgba(0, 0, 0, 0.3);
-        background: #fefefe; }
+        background: #fdfafc; }
       #mainNav .nav-link.active {
         outline: none;
         color: white;
-        background-color: #660033; }
+        background-color: #4B2436; }
         #mainNav .nav-link.active:hover {
           color: #003366; } }
   #footer {

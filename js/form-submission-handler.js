@@ -85,7 +85,7 @@ function validEmail(email) { // see:
       xhr.onreadystatechange = function() {
           console.log( xhr.status, xhr.statusText )
           console.log(xhr.responseText);
-          document.getElementById("gform").style.display = "none"; // hide form
+          document.getElementById("rsvp-section").style.display = "none"; // hide form
           var thankYouMessage = document.getElementById("thankyou_message");
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
@@ -106,5 +106,5 @@ function validEmail(email) { // see:
     var form = document.getElementById("gform");
     form.addEventListener("submit", handleFormSubmit, false);
   };
-  
+
   document.addEventListener("DOMContentLoaded", loaded, false);
